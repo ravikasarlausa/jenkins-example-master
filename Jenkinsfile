@@ -9,6 +9,7 @@ pipeline {
                     sh 'mvn clean compile'
                 }*/
                 echo "Compile"
+                mvn --version
             }
         }
 
@@ -19,6 +20,7 @@ pipeline {
                     sh 'mvn test'
                 }*/
                 echo "Test"
+                mvn --version
             }
         }
 
@@ -30,6 +32,7 @@ pipeline {
                 
                 }*/
             echo "deploy"
+            mvn --version
             }
         }
     }
