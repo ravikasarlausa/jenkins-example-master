@@ -6,9 +6,9 @@ pipeline {
 
             steps {
                /* withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean compile'*/
+                    sh 'mvn clean compile'
+                }*/
                 echo "Compile"
-                }
             }
         }
 
@@ -16,9 +16,9 @@ pipeline {
 
             steps {
                 /*withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn test'*/
+                    sh 'mvn test'
+                }*/
                 echo "Test"
-                }
             }
         }
 
@@ -26,9 +26,10 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 /*withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'*/
-                echo "deploy"
-                }
+                    sh 'mvn deploy'
+                
+                }*/
+            echo "deploy"
             }
         }
     }
