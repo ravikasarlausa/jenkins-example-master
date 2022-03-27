@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools { 
         maven 'Maven 3.8.5' 
-        jdk 'jdk8' 
     }
     stages {
         stage ('Compile Stage') {
@@ -12,7 +11,7 @@ pipeline {
                     sh 'mvn clean compile'
                 }*/
                 echo "Compile"
-                bat mvn --version
+                bat 'mvn --version'
             }
         }
 
@@ -23,7 +22,7 @@ pipeline {
                     sh 'mvn test'
                 }*/
                 echo "Test"
-                bat mvn --version
+                bat 'mvn --version'
             }
         }
 
@@ -35,7 +34,7 @@ pipeline {
                 
                 }*/
             echo "deploy"
-            bat mvn --version
+            bat 'mvn --version'
             }
         }
     }
