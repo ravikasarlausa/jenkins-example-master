@@ -12,6 +12,7 @@ pipeline {
                 }*/
                 echo "Compile"
                 bat 'mvn --version'
+                bat 'mvn clean build'
             }
         }
 
